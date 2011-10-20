@@ -2,6 +2,7 @@
 class Group extends AppModel {
 	var $name = 'Group';
         var $displayField = 'group';
+        var $actsAs = array('Acl' => array('type' => 'requester'));
 	var $validate = array(
 		'group' => array(
 			'notempty' => array(
@@ -45,4 +46,7 @@ class Group extends AppModel {
 		)
 	);
 
+        function parentNode() {
+            return null;
+        }
 }

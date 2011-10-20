@@ -2,7 +2,7 @@
 class User extends AppModel {
 	var $name = 'User';
         var $displayField = 'username';
-        var $actsAs = array('Media.Transfer', 'Media.Coupler', 'Media.Meta');
+        var $actsAs = array('Media.Transfer', 'Media.Coupler', 'Media.Meta', 'Acl' => array('type' => 'requester'));
 	var $validate = array(
 		'username' => array(
 			'notempty' => array(
@@ -233,8 +233,29 @@ class User extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+    
+    function parentNode() {
+        if (!$this->id && empty($this->data)) {
+            return null;
+        }
+        if (isset($this->data['User']['group_id'])) {
+            $groupId = $this->data['User']['group_id'];
+        } else {
+            $groupId = $this->field('group_id');
+        }
+        if (!$groupId) {
+            return null;
+        } else {
+            return array('Group' => array('id' => $groupId));
+        }
+    }
+
+    function bindNode($user) {
+        return array('model' => 'Group', 'foreign_key' => $user['User']['group_id']);
+    }
+
         
-        function beforeSave() {
+    function beforeSave() {
         $this->hashPasswords(null, true);
         return true;
     }
