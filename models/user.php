@@ -22,7 +22,25 @@ class User extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
+                    'matchpassword' => array(
+                        'rule' => array('matchpassword'),
+                    //'message' => 'Your custom message here',
+                    //'allowEmpty' => false,
+                    //'required' => false,
+                    //'last' => false, // Stop validation after this rule
+                    //'on' => 'create', // Limit validation to 'create' or 'update' operations
+                    ),
+                ),
+                'password_confirmation' => array(
+                    'notempty' => array(
+                        'rule' => array('notempty'),
+                    //'message' => 'Your custom message here',
+                    //'allowEmpty' => false,
+                    //'required' => false,
+                    //'last' => false, // Stop validation after this rule
+                    //'on' => 'create', // Limit validation to 'create' or 'update' operations
+                    ),
+                ),
 		'first_name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
@@ -214,5 +232,26 @@ class User extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+        
+        function beforeSave() {
+        $this->hashPasswords(null, true);
+        return true;
+    }
+
+    function matchPassword($data) {
+        if ($data['password'] != $this->data['User']['password_confirmation']):
+            $this->invalidate('password_confirmation', 'Passwords do not match');
+            return false;
+        endif;
+        return true;
+    }
+
+    function hashPasswords($data) {
+        if (isset($this->data['User']['password'])) {
+            $this->data['User']['password'] = Security::hash($this->data['User']['password'], NULL, TRUE);
+            return $data;
+        }
+        return $data;
+    }
 
 }
