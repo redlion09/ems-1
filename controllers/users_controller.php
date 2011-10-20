@@ -4,11 +4,19 @@ class UsersController extends AppController {
 	var $name = 'Users';
 
         public function beforeFilter() {
+            parent::beforeFilter();
             
             if($this->action == 'add' || $this->action == 'edit'){
                 $this->Auth->authenticate = $this->User;
             }
         }
+        
+        function login() {}
+    
+        function logout() {
+            $this->redirect($this->Auth->logout());
+        }
+        
 	function index() {
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
