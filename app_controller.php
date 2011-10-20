@@ -38,7 +38,26 @@ class AppController extends Controller {
         $this->Auth->actionPath = 'controllers/';
         $this->Auth->authorize = 'actions';
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
-        $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'logout');
-        $this->Auth->loginRedirect = array('controller' => 'posts', 'action' => 'add');
+        $this->Auth->authError = "You are not currently logged in.";
+        $this->Auth->loginError = "Incorrent username / password combination.";
+        $this->Auth->loginRedirect = array('controller'=>'pages', 'action'=>'display', 'home');
+        $this->Auth->logoutRedirect = array('controller'=>'users', 'action'=>'login');
+    
+        $userInfo = $this->_userInfo();
+        $this->set(compact('userInfo'));
     }
+    
+    function _userInfo() {
+        $userInfo = array();
+        if($this->Auth->user()){
+            $userInfo['id'][0] = $this->Auth->user('id');
+            $userInfo['username'][0] = $this->Auth->user('username');
+            $userInfo['first_name'][0] = $this->Auth->user('first_name');
+            $userInfo['last_name'][0] = $this->Auth->user('last_name');
+            $userInfo['middle_name'][0] = $this->Auth->user('middle_name');
+            $userInfo['account_type'][0] = $this->Auth->user('account_type');
+        }
+        return $userInfo;
+    }
+    
 }
