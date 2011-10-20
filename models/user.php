@@ -2,6 +2,7 @@
 class User extends AppModel {
 	var $name = 'User';
         var $displayField = 'username';
+        var $actsAs = array('Media.Transfer', 'Media.Coupler', 'Media.Meta');
 	var $validate = array(
 		'username' => array(
 			'notempty' => array(

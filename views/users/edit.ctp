@@ -1,5 +1,5 @@
 <div class="users form">
-<?php echo $this->Form->create('User');?>
+<?php echo $this->Form->create('User', array('type'=>'file'));?>
 	<fieldset>
 		<legend><?php __('Edit User'); ?></legend>
 	<?php
@@ -18,10 +18,7 @@
 		echo $this->Form->input('position_id');
 		echo $this->Form->input('department_id');
 		echo $this->Form->input('group_id');
-		echo $this->Form->input('file');
-		echo $this->Form->input('dirname');
-		echo $this->Form->input('basename');
-		echo $this->Form->input('checksum');
+		echo $this->Form->input('file', array('type'=>'file'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
