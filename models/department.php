@@ -1,6 +1,7 @@
 <?php
 class Department extends AppModel {
 	var $name = 'Department';
+        var $displayField = 'department';
 	var $validate = array(
 		'department' => array(
 			'notempty' => array(

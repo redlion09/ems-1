@@ -1,6 +1,7 @@
 <?php
 class Group extends AppModel {
 	var $name = 'Group';
+        var $displayField = 'group';
 	var $validate = array(
 		'group' => array(
 			'notempty' => array(

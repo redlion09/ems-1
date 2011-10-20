@@ -1,6 +1,7 @@
 <?php
 class Location extends AppModel {
 	var $name = 'Location';
+        var $displayField = 'location';
 	var $validate = array(
 		'location' => array(
 			'notempty' => array(

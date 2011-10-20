@@ -1,6 +1,7 @@
 <?php
 class Position extends AppModel {
 	var $name = 'Position';
+        var $displayField = 'position';
 	var $validate = array(
 		'position' => array(
 			'notempty' => array(
