@@ -29,6 +29,16 @@ class UsersController extends AppController {
 		}
 		$this->set('user', $this->User->read(null, $id));
 	}
+        
+	function profile() {
+            $userInfo = $this->_userInfo();
+            $id = $userInfo['id'][0];
+		if ($id != $userInfo['id'][0]) {
+			$this->Session->setFlash(__('Invalid user', true));
+			$this->redirect(array('action' => 'index'));
+		}
+		$this->set('user', $this->User->read(null, $id));
+	}
 
 	function add() {
 		if (!empty($this->data)) {
@@ -80,4 +90,34 @@ class UsersController extends AppController {
 		$this->Session->setFlash(__('User was not deleted', true));
 		$this->redirect(array('action' => 'index'));
 	}
+        
+//        function initDB() {
+//        $group =& $this->User->Group;
+//        
+//        //admins
+//        $group->id = '4ea17a9c-41f4-4ac5-85e4-04db7f000101' ;     
+//        $this->Acl->allow($group, 'controllers');
+//
+//        //accounting
+//        $group->id = '4ea17b88-a70c-4712-b451-27e17f000101';
+//        $this->Acl->deny($group, 'controllers');
+//        $this->Acl->deny($group, 'controllers/Liquidations/add');
+//        $this->Acl->allow($group, 'controllers/Liquidations');
+//        $this->Acl->allow($group, 'controllers/Announcements');
+//        $this->Acl->allow($group, 'controllers/Users/profile');
+//        $this->Acl->allow($group, 'controllers/Notifications/index');
+//
+//        //regular
+//        $group->id = '4ea17b8c-fbfc-4825-a424-27e17f000101';
+//        $this->Acl->deny($group, 'controllers');        
+//        $this->Acl->allow($group, 'controllers/Liquidations');
+//        $this->Acl->allow($group, 'controllers/Users/profile');
+//        $this->Acl->allow($group, 'controllers/Announcements/view');
+//        $this->Acl->allow($group, 'controllers/Notifications/index');
+//        //we add an exit to avoid an ugly "missing views" error message
+//        echo "all done";
+//        exit;
+//    }
+
+        
 }
