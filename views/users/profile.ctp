@@ -78,7 +78,7 @@
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('File'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $user['User']['file']; ?>
+			<?php echo $this->Html->image('../media/transfer/img/' .$user['User']['basename'] , array('alt'=>__('Profile Picture', true), 'border'=>'0')); ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Dirname'); ?></dt>
