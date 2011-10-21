@@ -32,7 +32,7 @@
  */
 class AppController extends Controller {
     var $components = array('Acl','Auth', 'Session');
-    var $helpers = array('Html', 'Form', 'Session');
+    var $helpers = array('Html', 'Form', 'Session', 'Javascript');
     
     function beforeFilter() {
         $this->Auth->actionPath = 'controllers/';
