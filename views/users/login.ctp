@@ -1,7 +1,7 @@
 <div class="users login">
-<?php echo $this->Form->create('User', array('type'=>'file'));?>
+<?php echo $this->Form->create('User');?>
 	<fieldset>
-		<legend><?php __('Add User'); ?></legend>
+		<legend><?php __('Login'); ?></legend>
 	<?php
 		echo $this->Form->input('username');
 		echo $this->Form->input('password');
