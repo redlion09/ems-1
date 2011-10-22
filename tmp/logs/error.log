@@ -4,3 +4,103 @@
 2011-10-18 02:21:30 Warning: Warning (2): include_once(/home/jaggy/web/config/database.php) [http://php.net/function.include-once]: failed to open stream: No such file or directory in [/home/jaggy/web/cakephp/cake/libs/model/connection_manager.php, line 23]
 2011-10-18 02:21:30 Warning: Warning (2): include_once() [http://php.net/function.include]: Failed opening '/home/jaggy/web/config/database.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in [/home/jaggy/web/cakephp/cake/libs/model/connection_manager.php, line 23]
 2011-10-18 02:21:30 Error: Fatal Error (256): ConnectionManager::getDataSource - Non-existent data source default in [/home/jaggy/web/cakephp/cake/libs/model/connection_manager.php, line 102]
+2011-10-21 22:26:12 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/persistent/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:26:12 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/models/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:26:54 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/persistent/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:26:54 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/models/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:27 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/persistent/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:27 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/models/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:27 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/persistent/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:27 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/models/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:34 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/persistent/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:34 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/models/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:37 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/persistent/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:37 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/models/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:43 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/persistent/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:43 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/models/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:47 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/persistent/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:27:47 Warning: Warning (512): /home/jaggy/web/ems/tmp/cache/models/ is not writable in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 278]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_ems_list) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_aros) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_acos) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_aros_acos) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_users) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_positions) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_departments) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_groups) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_notifications) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_announcements) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_tags) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_announcements_tags) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_liquidations) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_locations) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_reports) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_miscellaneous_fees) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/models/cake_model_default_transportations) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/persistent/cake_core_default_en-us) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/persistent/cake_core_dir_map) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/persistent/cake_core_file_map) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-21 22:36:57 Warning: Warning (2): fopen(/home/jaggy/web/ems/tmp/cache/persistent/cake_core_object_map) [http://php.net/function.fopen]: failed to open stream: Permission denied in [/home/jaggy/web/cakephp/cake/libs/cache/file.php, line 142]
+2011-10-22 02:13:17 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 4ea17d4f-179c-41c6-b212-04d77f000101
+            [username] => jaggygauran
+            [first_name] => Jose Andres
+            [middle_name] => Cruz
+            [last_name] => Gauran
+            [email] => jaggygauran@gmail.com
+            [address] => 3933 Marigold St. Sun Valley
+            [city] => Paranaque
+            [mobile] => 09189004125
+            [home] => 823-6793
+            [created] => 2011-10-21 22:10:23
+            [position_id] => 4ea027e3-e448-458e-a51b-04d57f000101
+            [department_id] => 4ea027ed-c574-4980-bbbf-04d57f000101
+            [group_id] => 4ea17a9c-41f4-4ac5-85e4-04db7f000101
+            [file] => /home/jaggy/web/ems/webroot/media/transfer/img/269588_216844938356744_100000937182202_601475_2610081_n.jpg
+            [dirname] => transfer/img
+            [basename] => 269588_216844938356744_100000937182202_601475_2610081_n.jpg
+            [checksum] => 131f51410a28e4329042fd1a3833caee
+            [size] => 28158
+            [mime_type] => image/jpeg
+        )
+
+)
+
+Aco: controllers/Liquidations/date in [/home/jaggy/web/cakephp/cake/libs/controller/components/acl.php, line 273]
+2011-10-22 02:13:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /home/jaggy/web/cakephp/cake/libs/debugger.php:683) in [/home/jaggy/web/cakephp/cake/libs/controller/controller.php, line 742]
+2011-10-22 02:13:46 Warning: Warning (512): DbAcl::check() - Failed ARO/ACO node lookup in permissions check.  Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 4ea17d4f-179c-41c6-b212-04d77f000101
+            [username] => jaggygauran
+            [first_name] => Jose Andres
+            [middle_name] => Cruz
+            [last_name] => Gauran
+            [email] => jaggygauran@gmail.com
+            [address] => 3933 Marigold St. Sun Valley
+            [city] => Paranaque
+            [mobile] => 09189004125
+            [home] => 823-6793
+            [created] => 2011-10-21 22:10:23
+            [position_id] => 4ea027e3-e448-458e-a51b-04d57f000101
+            [department_id] => 4ea027ed-c574-4980-bbbf-04d57f000101
+            [group_id] => 4ea17a9c-41f4-4ac5-85e4-04db7f000101
+            [file] => /home/jaggy/web/ems/webroot/media/transfer/img/269588_216844938356744_100000937182202_601475_2610081_n.jpg
+            [dirname] => transfer/img
+            [basename] => 269588_216844938356744_100000937182202_601475_2610081_n.jpg
+            [checksum] => 131f51410a28e4329042fd1a3833caee
+            [size] => 28158
+            [mime_type] => image/jpeg
+        )
+
+)
+
+Aco: controllers/Liquidations/date in [/home/jaggy/web/cakephp/cake/libs/controller/components/acl.php, line 273]
+2011-10-22 02:13:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /home/jaggy/web/cakephp/cake/libs/debugger.php:683) in [/home/jaggy/web/cakephp/cake/libs/controller/controller.php, line 742]
+2011-10-22 02:25:57 Warning: Warning (512): Method HtmlHelper::input does not exist in [/home/jaggy/web/cakephp/cake/libs/view/helper.php, line 154]
