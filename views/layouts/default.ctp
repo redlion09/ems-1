@@ -31,6 +31,7 @@
 		echo $this->Html->css('cake.generic');
 
 		echo $scripts_for_layout;
+                echo $javascript->link(array('jquery-1.6.4.min'));
 	?>
 </head>
 <body>
