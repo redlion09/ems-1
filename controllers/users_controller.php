@@ -11,7 +11,12 @@ class UsersController extends AppController {
             }
         }
         
-        function login() {}
+        function login() {
+            if($this->Session->read('Auth.User')){
+                $this->Session->setFlash('You are logged in!');
+                $this->redirect('/', null, false);
+            }
+        }
         
         function logout() {
             $this->redirect($this->Auth->logout());
