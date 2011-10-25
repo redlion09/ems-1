@@ -64,7 +64,7 @@ class AppController extends Controller {
             $userInfo['first_name'][0] = $this->Auth->user('first_name');
             $userInfo['last_name'][0] = $this->Auth->user('last_name');
             $userInfo['middle_name'][0] = $this->Auth->user('middle_name');
-            $userInfo['account_type'][0] = $this->Auth->user('account_type');
+            $userInfo['group_id'][0] = $this->Auth->user('group_id');
         }
         return $userInfo;
     }
