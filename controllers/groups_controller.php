@@ -5,7 +5,7 @@ class GroupsController extends AppController {
 
         public function beforeFilter() {
             parent::beforeFilter();
-            $this->Auth->allow(array('*'));
+//            $this->Auth->allow(array('*'));
         }
 	function index() {
 		$this->Group->recursive = 0;
