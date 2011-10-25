@@ -1,3 +1,6 @@
+<?php
+    $count = $this->Session->read("Report.date.count");
+?>
 <div class="liquidations form">
 <?php echo $this->Form->create('Liquidation');?>
 	<fieldset>
@@ -8,6 +11,11 @@
 		echo $this->Form->input('isAccepted');
 		echo $this->Form->input('user_id');
 		echo $this->Form->input('location_id');
+                for($i = 0; $i<$count; $i++){
+                    $date = $this->Session->read("Report.$i.date");
+                    $dt = strtotime($date);
+                    echo $this->Form->button(date("l", $dt), array('class'=>'actions'));
+                }
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
