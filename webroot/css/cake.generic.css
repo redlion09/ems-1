@@ -538,3 +538,7 @@ div.code-coverage-results span.result-good {
 #url-rewriting-warning {
 	display: none;
 }
+
+#user-nav{
+    text-align: right;
+}
