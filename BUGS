@@ -1,0 +1,2 @@
+Accountant and Regular accounts can't acces the logout module.
+ - Locked out of ACL... gonna fix it later.
