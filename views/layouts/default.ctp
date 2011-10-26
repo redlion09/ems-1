@@ -40,12 +40,11 @@
                 <div id="branding">
                 </div>
                 <?php 
-                if(!$this->action == 'login'){
+                if($this->action != 'login'){
                     echo $this->element('navigation'); 
                 }
                 ?>
             </div>
-                <h1><?php echo $this->Html->link(__('CakePHP: the rapid development php framework', true), 'http://cakephp.org'); ?></h1>
         </div>
 	<div id="container">
 		<div id="content" class="shadow">
