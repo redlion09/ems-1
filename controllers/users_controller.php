@@ -108,6 +108,7 @@ class UsersController extends AppController {
 //        $group->id = '4ea17b88-a70c-4712-b451-27e17f000101';
 //        $this->Acl->deny($group, 'controllers');
 //        $this->Acl->deny($group, 'controllers/Liquidations/add');
+//        $this->Acl->allow($group, 'controllers/Pages');
 //        $this->Acl->allow($group, 'controllers/Liquidations');
 //        $this->Acl->allow($group, 'controllers/Announcements');
 //        $this->Acl->allow($group, 'controllers/Users/profile');
@@ -116,6 +117,7 @@ class UsersController extends AppController {
 //        //regular
 //        $group->id = '4ea17b8c-fbfc-4825-a424-27e17f000101';
 //        $this->Acl->deny($group, 'controllers');        
+//        $this->Acl->allow($group, 'controllers/Pages');
 //        $this->Acl->allow($group, 'controllers/Liquidations');
 //        $this->Acl->allow($group, 'controllers/Users/profile');
 //        $this->Acl->allow($group, 'controllers/Announcements/view');
