@@ -142,7 +142,7 @@ CREATE TABLE `aros_acos` (
   `_delete` varchar(2) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `ARO_ACO_KEY` (`aro_id`,`aco_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +151,7 @@ CREATE TABLE `aros_acos` (
 
 LOCK TABLES `aros_acos` WRITE;
 /*!40000 ALTER TABLE `aros_acos` DISABLE KEYS */;
-INSERT INTO `aros_acos` VALUES (1,1,5,'1','1','1','1'),(2,2,5,'-1','-1','-1','-1'),(3,2,34,'-1','-1','-1','-1'),(4,2,31,'1','1','1','1'),(5,2,13,'1','1','1','1'),(6,2,99,'1','1','1','1'),(7,2,38,'1','1','1','1'),(8,3,5,'-1','-1','-1','-1'),(9,3,31,'1','1','1','1'),(10,3,99,'1','1','1','1'),(11,3,15,'1','1','1','1'),(12,3,38,'1','1','1','1');
+INSERT INTO `aros_acos` VALUES (1,1,5,'1','1','1','1'),(2,2,5,'-1','-1','-1','-1'),(3,2,34,'-1','-1','-1','-1'),(4,2,6,'1','1','1','1'),(5,2,31,'1','1','1','1'),(6,2,13,'1','1','1','1'),(7,2,99,'1','1','1','1'),(8,2,38,'1','1','1','1'),(9,3,5,'-1','-1','-1','-1'),(10,3,6,'1','1','1','1'),(11,3,31,'1','1','1','1'),(12,3,99,'1','1','1','1'),(13,3,15,'1','1','1','1'),(14,3,38,'1','1','1','1');
 /*!40000 ALTER TABLE `aros_acos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -356,6 +356,7 @@ CREATE TABLE `rates` (
 
 LOCK TABLES `rates` WRITE;
 /*!40000 ALTER TABLE `rates` DISABLE KEYS */;
+INSERT INTO `rates` VALUES ('4ea93316-d658-4fb2-a575-0f767f000101','Breakfast','M','SO','120.00'),('4ea9332a-75ec-4d19-a0e1-047a7f000101','Lunch','M','SO','150.00'),('4ea93333-8924-4c50-98dd-0f757f000101','Dinner','M','SO','150.00'),('4ea9333f-6578-4550-833f-0f8b7f000101','Lodging','M','SO','1600.00');
 /*!40000 ALTER TABLE `rates` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -486,4 +487,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-10-27  0:17:38
+-- Dump completed on 2011-10-27 22:00:59
