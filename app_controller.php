@@ -32,19 +32,28 @@
  */
 class AppController extends Controller {
     var $components = array('Acl','Auth', 'Session');
-    var $helpers = array('Html', 'Form', 'Session');
+    var $helpers = array('Html', 'Form', 'Session', 'Javascript');
     
     function beforeFilter() {
         $this->Auth->actionPath = 'controllers/';
         $this->Auth->authorize = 'actions';
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
         $this->Auth->authError = "You are not currently logged in.";
-        $this->Auth->loginError = "Incorrent username / password combination.";
+        $this->Auth->loginError = "Incorrect username / password combination.";
         $this->Auth->loginRedirect = array('controller'=>'pages', 'action'=>'display', 'home');
         $this->Auth->logoutRedirect = array('controller'=>'users', 'action'=>'login');
     
         $userInfo = $this->_userInfo();
-        $this->set(compact('userInfo'));
+        $loggedIn = $this->_loggedIn();
+        $this->set(compact('userInfo','loggedIn'));
+    }
+    
+    function _loggedIn() {
+        $loggedIn = false;
+        if($this->Auth->user()){
+            $loggedIn = true;
+        }
+        return $loggedIn;
     }
     
     function _userInfo() {
@@ -55,7 +64,7 @@ class AppController extends Controller {
             $userInfo['first_name'][0] = $this->Auth->user('first_name');
             $userInfo['last_name'][0] = $this->Auth->user('last_name');
             $userInfo['middle_name'][0] = $this->Auth->user('middle_name');
-            $userInfo['account_type'][0] = $this->Auth->user('account_type');
+            $userInfo['group_id'][0] = $this->Auth->user('group_id');
         }
         return $userInfo;
     }

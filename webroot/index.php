@@ -50,7 +50,11 @@
  *
  */
 	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
-		define('CAKE_CORE_INCLUDE_PATH',  DS . 'home' . DS . 'jaggy' . DS . 'web' . DS . 'cakephp');
+            /*
+             * just change cakephp to your cakephp folder.
+             */
+		define('CAKE_CORE_INCLUDE_PATH',  dirname(dirname(dirname(__FILE__))) . DS . 'cakephp');
+//		define('CAKE_CORE_INCLUDE_PATH',  DS . 'home' . DS . 'jaggy' . DS . 'web' . DS . 'cakephp');
 	}
 
 /**

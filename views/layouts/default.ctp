@@ -31,15 +31,28 @@
 		echo $this->Html->css('cake.generic');
 
 		echo $scripts_for_layout;
+                echo $javascript->link(array('jquery-1.6.4.min'));
 	?>
 </head>
 <body>
+        <div id="header">
+            <div id="header-container">
+                <div id="branding">
+                </div>
+                <?php 
+                if($this->action != 'login'){
+                    echo $this->element('navigation'); 
+                }
+                ?>
+            </div>
+        </div>
 	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link(__('CakePHP: the rapid development php framework', true), 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
-
+		<div id="content" class="shadow">
+                        <?php if($loggedIn): ?>
+                            <div id="user-nav">
+                                <?php echo sprintf("%s, %s %s [%s] %s", $userInfo['last_name'][0], $userInfo['first_name'][0], $userInfo['middle_name'][0], $this->Html->link($userInfo['username'][0], array('controller'=>'users','action'=>'profile')), $this->Html->link('logout', array('controller'=>'users','action'=>'logout'))); ?>
+                            </div>
+                        <?php endif; ?>
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $content_for_layout; ?>
