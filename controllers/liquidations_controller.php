@@ -30,6 +30,16 @@ class LiquidationsController extends AppController {
 		$locations = $this->Liquidation->Location->find('list');
 		$this->set(compact('users', 'locations'));
 	}
+	function date() {
+		if (!empty($this->data)) {
+                    $this->Liquidation->create();
+                    $this->Session->write("Report.date.count", count($this->data['Liquidation']['dates']));
+                    for($i = 0; $i<count($this->data['Liquidation']['dates']); $i++){
+                        $this->Session->write("Report.$i.date", $this->data['Liquidation']['dates'][$i]);
+                    }
+                    $this->redirect(array('action'=>'add'));
+		}
+	}
 
 	function edit($id = null) {
 		if (!$id && empty($this->data)) {

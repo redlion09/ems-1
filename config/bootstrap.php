@@ -49,4 +49,7 @@
  *
  */
 
+define('ADMINISTRATOR', '4ea17a9c-41f4-4ac5-85e4-04db7f000101');
+define('ACCOUNTING', '4ea17b88-a70c-4712-b451-27e17f000101');
+define('REGULAR', '4ea17b8c-fbfc-4825-a424-27e17f000101');
 require APP . 'plugins/media/config/core.php';

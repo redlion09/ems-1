@@ -5,15 +5,21 @@ class UsersController extends AppController {
 
         public function beforeFilter() {
             parent::beforeFilter();
-            $this->Auth->allow(array('*'));
+            $this->Auth->allow(array('logout'));
             if($this->action == 'add' || $this->action == 'edit'){
                 $this->Auth->authenticate = $this->User;
             }
         }
         
-        function login() {}
-    
+        function login() {
+            if($this->Session->read('Auth.User')){
+                $this->Session->setFlash('You are logged in!');
+                $this->redirect('/', null, false);
+            }
+        }
+        
         function logout() {
+            $this->Session->setFlash('Successfully logged out.');
             $this->redirect($this->Auth->logout());
         }
         
@@ -102,6 +108,7 @@ class UsersController extends AppController {
 //        $group->id = '4ea17b88-a70c-4712-b451-27e17f000101';
 //        $this->Acl->deny($group, 'controllers');
 //        $this->Acl->deny($group, 'controllers/Liquidations/add');
+//        $this->Acl->allow($group, 'controllers/Pages');
 //        $this->Acl->allow($group, 'controllers/Liquidations');
 //        $this->Acl->allow($group, 'controllers/Announcements');
 //        $this->Acl->allow($group, 'controllers/Users/profile');
@@ -110,6 +117,7 @@ class UsersController extends AppController {
 //        //regular
 //        $group->id = '4ea17b8c-fbfc-4825-a424-27e17f000101';
 //        $this->Acl->deny($group, 'controllers');        
+//        $this->Acl->allow($group, 'controllers/Pages');
 //        $this->Acl->allow($group, 'controllers/Liquidations');
 //        $this->Acl->allow($group, 'controllers/Users/profile');
 //        $this->Acl->allow($group, 'controllers/Announcements/view');
